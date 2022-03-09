@@ -1,0 +1,91 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: $darkBlue;
+  font-family: $font;
+  line-height: 1.3;
+}
+
+.container {
+  margin: auto;
+  max-width: 342px;
+  border-radius: 10px;
+  background-color: $darkGrayishBlue;
+  margin-top: 120px;
+  margin-bottom: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include breakpoint(large) {
+    border-radius: 1rem;
+    max-width: 540px;
+    margin-top: 224px;
+    margin-bottom: 254px;
+  }
+
+  .advice_id {
+    color: $neonGreen;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 38px;
+    font-size: 1rem;
+  }
+
+  q {
+    padding-left: 26px;
+    padding-right: 26px;
+    color: $lightCyan;
+    text-align: center;
+    font-size: 28px;
+
+    @include breakpoint(large) {
+      padding-left: 52px;
+      padding-right: 52px;
+    }
+  }
+
+  #divider-desktop {
+    display: none;
+    @include breakpoint(large) {
+      display: block;
+      text-align: center;
+      margin-top: 48px;
+      margin-bottom: 48px;
+    }
+  }
+
+  #divider-mobile {
+    display: block;
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    @include breakpoint(large) {
+      display: none;
+    }
+  }
+
+  button {
+    padding: 22px;
+    border-radius: 50%;
+    border: none;
+    background-color: $neonGreen;
+    cursor: pointer;
+    transform: translateY(50%);
+
+    &:hover {
+      box-shadow: -1px 1px 88px 12px rgba(82, 255, 168, 1);
+    }
+  }
+}

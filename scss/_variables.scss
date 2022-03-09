@@ -1,0 +1,24 @@
+//Colors
+
+//Primary
+$lightCyan: rgb(206, 227, 233);
+$neonGreen: rgb(82, 255, 168);
+
+//Neutral
+$grayishBlue: rgb(78, 93, 115);
+$darkGrayishBlue: rgb(50, 58, 73);
+$darkBlue: rgb(31, 38, 50);
+
+//Font
+$font: "Manrope", sans-serif;
+
+$breakpoints: (
+  medium: 640px,
+  large: 899px,
+);
+
+@mixin breakpoint($size) {
+  @media screen and (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
